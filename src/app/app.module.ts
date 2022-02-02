@@ -3,10 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { ProductsComponent } from './products/products.component';
+import { SharedclassesandtypesComponent } from './sharedclassesandtypes/sharedclassesandtypes.component';
+import { ClassBindingComponent } from './class-binding/class-binding.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    ProductsComponent,
+    SharedclassesandtypesComponent,
+    ClassBindingComponent
   ],
   imports: [
     BrowserModule,
