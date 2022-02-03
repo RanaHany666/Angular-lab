@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
-import { SharedclassesandtypesComponent } from './sharedclassesandtypes/sharedclassesandtypes.component';
+//import { SharedclassesandtypesComponent} from './sharedclassesandtypes/sharedclassesandtypes.component';
 import { ClassBindingComponent } from './class-binding/class-binding.component';
+import { SharedcalssesComponent } from './sharedcalsses/sharedcalsses.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +16,9 @@ import { ClassBindingComponent } from './class-binding/class-binding.component';
     HeaderComponent,
     FooterComponent,
     ProductsComponent,
-    SharedclassesandtypesComponent,
-    ClassBindingComponent
+    //SharedclassesandtypesComponent,
+    ClassBindingComponent,
+    SharedcalssesComponent
   ],
   imports: [
     BrowserModule,

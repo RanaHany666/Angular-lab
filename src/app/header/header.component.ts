@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
-  myId:string="rana";
-  isDisabled:Boolean=false;
+  // myId:string="rana";
+  // isDisabled:Boolean=false;
 
   ngOnInit(): void {
   }
