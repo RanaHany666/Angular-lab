@@ -8,19 +8,28 @@ import { Component, OnInit } from '@angular/core';
 export class ClassBindingComponent implements OnInit {
 
   constructor() { }
-  textColor:string="text_sucess";
-  hasError:boolean=false;
-  isSpecial:boolean=false;
-  messageClasses={
-    "text-sucess":!this.hasError,
-    "text-danger":!this.hasError,
-    "text-special":this.isSpecial
-
-
-  }
-
-
   ngOnInit(): void {
   }
+  printMsg(){
+    console.log("welcome tp Angluar")
+  }
+  // textColor:string="text_sucess";
+  // hasError:boolean=false;
+  // isSpecial:boolean=false;
+  // messageClasses={
+  //   "text-sucess":!this.hasError,
+  //   "text-danger":!this.hasError,
+  //   "text-special":this.isSpecial
+
+
+  // }
+  // isactive=true;
+  // isLoggedIn =true;
+  // userName="salah";
+
+  // ng for 
+  // cars =["tibo","Logan","BMW"]
+
+  
 
 }

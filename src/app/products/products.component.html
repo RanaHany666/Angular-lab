@@ -16,7 +16,14 @@
               <h1 class="card-title pricing-card-title"> <img [src]="productList[1].image" class="card-img-top" alt="..." />
               </h1>
               <h5 class="card-title"> {{ storeName }} </h5>
-              <h5> We offer an explicit discount of  ${{ discount}}</h5>
+              <h5  *ngIf="discount != 'No Discount' ;then elseBlock;else thenBlock"> </h5>
+             
+              <ng-template  #elseBlock   > 
+                <h5 > We offer an explicit discount of  ${{ discount}}</h5>
+              </ng-template>
+              <ng-template  #thenBlock> 
+                <h5 >  </h5>
+              </ng-template>
               
               <button type="button" class="btn btn-lg btn-block btn-primary">More Details</button>
             </div>
@@ -26,7 +33,14 @@
             <div class="card-body">
               <h1 class="card-title pricing-card-title">  <img [src]="productList[1].image" class="card-img-top" alt="..." /> </h1>
               <h5 class="card-title">{{ storeName }}</h5>
-              <h5> We offer an explicit discount of  ${{ discount}}</h5>
+              <h5  *ngIf="discount != 'No Discount' ;then elseBlock;else thenBlock"> </h5>
+             
+              <ng-template  #elseBlock   > 
+                <h5 > We offer an explicit discount of  ${{ discount}}</h5>
+              </ng-template>
+              <ng-template  #thenBlock> 
+                <h5 >  </h5>
+              </ng-template>
 
 
               <button type="button" class="btn btn-lg btn-block btn-primary">More Details</button>
@@ -37,65 +51,59 @@
             <div class="card-body">
               <h1 class="card-title pricing-card-title">  <img [src]="productList[1].image" class="card-img-top" alt="..." /></h1>
               <h5 class="card-title">{{ storeName }}</h5>
-              <h5> We offer an explicit discount of ${{ discount}}</h5>
-
+              <h5  *ngIf="discount != 'No Discount' ;then elseBlock;else thenBlock"> </h5>
+             
+              <ng-template  #elseBlock   > 
+                <h5 > We offer an explicit discount of  ${{ discount}}</h5>
+              </ng-template>
+              <ng-template  #thenBlock> 
+                <h5 >  </h5>
+              </ng-template>
 
               <button type="button" class="btn btn-lg btn-block btn-primary">More Details</button>
+            
             </div>
+
           </div>
         </div>
+                <!-- <div *ngIf="show" >  //with ngIF -->
+                <div [hidden] ="isDisplayed">  -->
+        <table style="border:1px solid black">
+          <thead>
+              <tr>
+                  <th>id</th>
+                  <th>Quantity</th>
+                  <th> price</th>
+                  <th>image</th>
+                 
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor='let product of productList'>
+                  <td>{{product.id}}</td>
+                  <td>{{product.quantity}}</td>
+                  <td>{{product.price}}</td>
+                  <td>{{product.image}}</td>
+                 
+              </tr>
+            
+          </tbody>
+      </table>
     </div>
+    </div>
+    <br> <br>
+    <!-- question 4 -->
+    <input type="text" [(ngModel)]="clientName"/>
+    <br> <br>
 
+    <!-- question 5 -->
+
+    <input type="button" value ="Buy "(click)=" hidTable()"/>
+    {{message   +   clientName}}
     
+    
+     
     
 </body>
 </html>
 
-
-
-<!-- <div class="row row-cols-3">
-   class="col">
-
-    <div class="p-2">
-      <div class="card">
-        <img [src]="productList[1].image" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">{{ storeName }}</h5>
-          <p class="card-text">We offer an explicit discount of: {{ discount }}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-    
-  <app-product class="col"> 
-    <div class="p-2">
-      <div class="card">
-        <img [src]="productList[1].image" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">{{ storeName }}</h5>
-          <p class="card-text">We offer an explicit discount of: {{ discount }}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-    
-
-  </app-product>
-  <app-product class="col">
-
-    <div class="p-2">
-      <div class="card">
-        <img [src]="productList[1].image" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">{{ storeName }}</h5>
-          <p class="card-text">We offer an explicit discount of: {{ discount }}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-    
-
-
-
-  </app-product>
-</div> --> -->

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ICategory } from '../sharedcalsses/ICategory';
 
 @Component({
   selector: 'app-header',
@@ -6,12 +7,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  categoryList:ICategory[];
 
-  constructor() { }
-  // myId:string="rana";
-  // isDisabled:Boolean=false;
+    constructor() {
+      this.categoryList = [
+        {
+          id: 1,
+          name: 'phones',
+        },
+        {
+          id: 2,
+          name: 'clothes',
+        },
+        {
+          id: 3,
+          name: 'technologies',
+        },
+      ];
+     }
 
-  ngOnInit(): void {
+    ngOnInit(): void {
+    }
+  
   }
-
-}
