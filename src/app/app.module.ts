@@ -10,6 +10,7 @@ import { ProductsComponent } from './products/products.component';
 import { ClassBindingComponent } from './class-binding/class-binding.component';
 import { SharedcalssesComponent } from './sharedcalsses/sharedcalsses.component';
 import { FormsModule } from '@angular/forms';
+import { DiscountPipe } from './discount.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     ProductsComponent,
     //SharedclassesandtypesComponent,
     ClassBindingComponent,
-    SharedcalssesComponent
+    SharedcalssesComponent,
+    DiscountPipe
   ],
   imports: [
     BrowserModule,

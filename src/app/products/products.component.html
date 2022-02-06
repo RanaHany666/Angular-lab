@@ -19,7 +19,7 @@
               <h5  *ngIf="discount != 'No Discount' ;then elseBlock;else thenBlock"> </h5>
              
               <ng-template  #elseBlock   > 
-                <h5 > We offer an explicit discount of  ${{ discount}}</h5>
+                <h5 > We offer an explicit discount of  {{ discount}}</h5>
               </ng-template>
               <ng-template  #thenBlock> 
                 <h5 >  </h5>
@@ -36,7 +36,7 @@
               <h5  *ngIf="discount != 'No Discount' ;then elseBlock;else thenBlock"> </h5>
              
               <ng-template  #elseBlock   > 
-                <h5 > We offer an explicit discount of  ${{ discount}}</h5>
+                <h5 > We offer an explicit discount of  {{ discount}}</h5>
               </ng-template>
               <ng-template  #thenBlock> 
                 <h5 >  </h5>
@@ -54,7 +54,7 @@
               <h5  *ngIf="discount != 'No Discount' ;then elseBlock;else thenBlock"> </h5>
              
               <ng-template  #elseBlock   > 
-                <h5 > We offer an explicit discount of  ${{ discount}}</h5>
+                <h5 > We offer an explicit discount of   {{ discount / 100 | percent}}</h5>
               </ng-template>
               <ng-template  #thenBlock> 
                 <h5 >  </h5>
@@ -67,7 +67,7 @@
           </div>
         </div>
                 <!-- <div *ngIf="show" >  //with ngIF -->
-                <div [hidden] ="isDisplayed">  -->
+                <div [hidden] ="isDisplayed">  
         <table style="border:1px solid black">
           <thead>
               <tr>
@@ -100,6 +100,10 @@
 
     <input type="button" value ="Buy "(click)=" hidTable()"/>
     {{message   +   clientName}}
+    <br> <br>
+    <!-- question 6-->
+    <!-- {{storeName| uppercase}} -->
+
     
     
      

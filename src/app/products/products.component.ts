@@ -13,16 +13,16 @@ import { IProduct } from '../sharedcalsses/IProudcts';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-  discount!: DiscountOffers;
-  storeName!: String;
+  discount: DiscountOffers;
+  storeName: String;
   storeLogo!: String;
   productList!: IProduct[];
   categoryList!:ICategory[];
   clientName!: String;
   isPurshased!: Boolean;
   constructor() {
-    this.discount = DiscountOffers.Discount;
-    this.storeName = 'Laptop';
+    this.discount = DiscountOffers.ten;
+    this.storeName = "Dream ";
     this.storeLogo = 'Lenvo';
     this.productList = [
       {id: 1,name: 'Lenvo',quantity: 10,price: 10000,        image: 'assets/image/it.jpg', },
