@@ -1,4 +1,6 @@
+
 import { Component, OnInit } from '@angular/core';
+import { ProductServiceService } from '../services/product-service.service';
 
 @Component({
   selector: 'app-class-binding',
@@ -6,29 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./class-binding.component.scss']
 })
 export class ClassBindingComponent implements OnInit {
+  ProductServiceService: any;
 
-  constructor() { }
+  constructor(private productService:ProductServiceService) { }
+  productTable:any;
+
   ngOnInit(): void {
+    this.productTable=this.ProductServiceService.GetAllProducts();
+
   }
-  printMsg(){
-    console.log("welcome tp Angluar")
-  }
-  // textColor:string="text_sucess";
-  // hasError:boolean=false;
-  // isSpecial:boolean=false;
-  // messageClasses={
-  //   "text-sucess":!this.hasError,
-  //   "text-danger":!this.hasError,
-  //   "text-special":this.isSpecial
 
-
-  // }
-  // isactive=true;
-  // isLoggedIn =true;
-  // userName="salah";
-
-  // ng for 
-  // cars =["tibo","Logan","BMW"]
 
   
 

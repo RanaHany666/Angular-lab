@@ -9,6 +9,11 @@
 </head>
 <body>
     <div class="container">
+      <select> 
+               
+        <option *ngFor="let category of categoryList" class="dropdown-item"> {{category.name}}</option>
+
+        </select>
         <div class="card-deck mb-3 text-center">
           <div class="card mb-4 box-shadow">
             
@@ -19,7 +24,7 @@
               <h5  *ngIf="discount != 'No Discount' ;then elseBlock;else thenBlock"> </h5>
              
               <ng-template  #elseBlock   > 
-                <h5 > We offer an explicit discount of  {{ discount}}</h5>
+                <h5 > We offer an explicit discount of  ${{ discount}}</h5>
               </ng-template>
               <ng-template  #thenBlock> 
                 <h5 >  </h5>
@@ -36,7 +41,7 @@
               <h5  *ngIf="discount != 'No Discount' ;then elseBlock;else thenBlock"> </h5>
              
               <ng-template  #elseBlock   > 
-                <h5 > We offer an explicit discount of  {{ discount}}</h5>
+                <h5 > We offer an explicit discount of  ${{ discount}}</h5>
               </ng-template>
               <ng-template  #thenBlock> 
                 <h5 >  </h5>
@@ -54,7 +59,7 @@
               <h5  *ngIf="discount != 'No Discount' ;then elseBlock;else thenBlock"> </h5>
              
               <ng-template  #elseBlock   > 
-                <h5 > We offer an explicit discount of   {{ discount / 100 | percent}}</h5>
+                <h5 > We offer an explicit discount of  ${{ discount}}</h5>
               </ng-template>
               <ng-template  #thenBlock> 
                 <h5 >  </h5>
@@ -83,7 +88,7 @@
                   <td>{{product.id}}</td>
                   <td>{{product.quantity}}</td>
                   <td>{{product.price}}</td>
-                  <td>{{product.image}}</td>
+                  <td> <img  src={{product.image}}/> </td>
                  
               </tr>
             
@@ -102,7 +107,13 @@
     {{message   +   clientName}}
     <br> <br>
     <!-- question 6-->
-    <!-- {{storeName| uppercase}} -->
+   {{storeName | uppercase}}
+
+    <!-- lab 3 -->
+    <!-- <div *ngFor="let prodt of productTable">
+      {{prodt.name}}
+    </div> -->
+    <button (click)="sendData()"> click to send Data from products</button>
 
     
     

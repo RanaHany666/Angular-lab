@@ -1,7 +1,11 @@
 
 <app-header > </app-header>
-<app-products> </app-products>
+<app-products (childEvent)="messageFromProduct=$event "> </app-products>
+{{ messageFromProduct}}
+
+
 <br>
+<app-class-binding></app-class-binding>
 <app-footer></app-footer>
 
-<!-- <app-class-binding></app-class-binding> -->
+
