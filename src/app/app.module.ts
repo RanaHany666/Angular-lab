@@ -9,6 +9,7 @@ import { ProductsComponent } from './products/products.component';
 //import { SharedclassesandtypesComponent} from './sharedclassesandtypes/sharedclassesandtypes.component';
 import { ClassBindingComponent } from './class-binding/class-binding.component';
 import { SharedcalssesComponent } from './sharedcalsses/sharedcalsses.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +19,13 @@ import { SharedcalssesComponent } from './sharedcalsses/sharedcalsses.component'
     ProductsComponent,
     //SharedclassesandtypesComponent,
     ClassBindingComponent,
-    SharedcalssesComponent
+    SharedcalssesComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

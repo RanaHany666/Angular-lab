@@ -1,6 +1,37 @@
 <p>class-binding works!</p>
 <!-- <h2 class=".text_sucess">  hello</h2> -->
 <!-- <h2 [class]="textColor">  hello</h2> -->
-<h2 [class.text-danger]="hasError"> Helloworld</h2>
-<h2 [ngClass]="messageClasses"> Helloworld</h2>
+<!-- <h2 [class.text-danger]="hasError"> Helloworld</h2>
+<h2 [ngClass]="messageClasses"> Helloworld</h2> -->
+
+<!-- <h2 *ngIf="isactive"> Hello world </h2> -->
+
+    <!-- <h2 *ngIf="isLoggedIn; then thenBlock ;else elseBlock" > 
+
+    </h2>
+    <ng-template #elseBlock>
+<h2> 
+    welcome Guest
+</h2>
+ </ng-template>
+
+<ng-template #thenBlock> 
+    <h2> 
+        welcome {{userName}}
+
+</h2>
+  </ng-template> -->
+
+
+  <!-- // ng for  -->
+  <!-- <div *ngFor="let car of cars ;index as i ;odd as o"> {{o}} {{car}} </div> -->
+
+  <!-- Event Binding -->
+  <!-- <input type="button" value="Geeting" (click)=" printMsg()"/> -->
+
+<div *ngFor="let prodt of productTable">
+      {{prodt}}
+    </div>
+
+
 
