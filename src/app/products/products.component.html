@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+<body>
+
+
+
+    <div class="container">
+      <select> 
+               
+        <option *ngFor="let category of categoryList" class="dropdown-item"> {{category.name}}</option>
+
+        </select>
+        <div class="card-deck mb-3 text-center">
+          <div class="card mb-4 box-shadow">
+            
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title"> <img [src]="productList[1].image" class="card-img-top" alt="..." />
+              </h1>
+              <h5 class="card-title"> {{ storeName }} </h5>
+              <h5  *ngIf="discount != 'No Discount' ;then elseBlock;else thenBlock"> </h5>
+             
+              <ng-template  #elseBlock   > 
+                <h5 > We offer an explicit discount of  ${{ discount}}</h5>
+              </ng-template>
+              <ng-template  #thenBlock> 
+                <h5 >  </h5>
+              </ng-template>
+              
+              <button type="button" class="btn btn-lg btn-block btn-primary">More Details</button>
+            </div>
+          </div>
+          <div class="card mb-4 box-shadow">
+           
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">  <img [src]="productList[1].image" class="card-img-top" alt="..." /> </h1>
+              <h5 class="card-title">{{ storeName }}</h5>
+              <h5  *ngIf="discount != 'No Discount' ;then elseBlock;else thenBlock"> </h5>
+             
+              <ng-template  #elseBlock   > 
+                <h5 > We offer an explicit discount of  ${{ discount}}</h5>
+              </ng-template>
+              <ng-template  #thenBlock> 
+                <h5 >  </h5>
+              </ng-template>
+
+
+              <button type="button" class="btn btn-lg btn-block btn-primary">More Details</button>
+            </div>
+          </div>
+          <div class="card mb-4 box-shadow">
+            
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">  <img [src]="productList[1].image" class="card-img-top" alt="..." /></h1>
+              <h5 class="card-title">{{ storeName }}</h5>
+              <h5  *ngIf="discount != 'No Discount' ;then elseBlock;else thenBlock"> </h5>
+             
+              <ng-template  #elseBlock   > 
+                <h5 > We offer an explicit discount of  ${{ discount}}</h5>
+              </ng-template>
+              <ng-template  #thenBlock> 
+                <h5 >  </h5>
+              </ng-template>
+
+              <button type="button" class="btn btn-lg btn-block btn-primary">More Details</button>
+            
+            </div>
+
+          </div>
+        </div>
+                <!-- <div *ngIf="show" >  //with ngIF -->
+                <div [hidden] ="isDisplayed">  
+        <table style="border:1px solid black">
+          <thead>
+              <tr>
+                  <th>id</th>
+                  <th>Quantity</th>
+                  <th> price</th>
+                  <th>image</th>
+                 
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor='let product of productList'>
+                  <td>{{product.id}}</td>
+                  <td>{{product.quantity}}</td>
+                  <td>{{product.price}}</td>
+                  <td> <img  src={{product.image}}/> </td>
+                 
+              </tr>
+            
+          </tbody>
+      </table>
+    </div>
+    </div>
+    <br> <br>
+    <!-- question 4 -->
+    <input type="text" [(ngModel)]="clientName"/>
+    <br> <br>
+
+    <!-- question 5 -->
+
+    <input type="button" value ="Buy "(click)=" hidTable()"/>
+    {{message   +   clientName}}
+    <br> <br>
+    <!-- question 6-->
+   {{storeName | uppercase}}
+
+    <!-- lab 3 -->
+    <!-- <div *ngFor="let prodt of productTable">
+      {{prodt.name}}
+    </div> -->
+    <button (click)="sendData()"> click to send Data from products</button>
+
+    
+    
+     
+    
+</body>
+</html>
+

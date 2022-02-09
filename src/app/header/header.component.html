@@ -1,0 +1,64 @@
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/products">Products</a>
+        
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link"  routerLink="/home">Home <span class="sr-only">(current)</span></a>
+              <nav >
+    <a routerLink="/products"></a> &nbsp;
+   <a routerLink="/home" >   </a>
+   </nav>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/post">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="user" >
+                user
+              </a>
+           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <!-- <select  > 
+               
+                  <option *ngFor="let category of categoryList" class="dropdown-item"> name:{{category.name}}</option>
+
+             </select> -->
+
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+  
+  <img src="assets/image/header.jpg" width="100%" height="300px">
+  <br> <br>
+
+
+      <!-- <input type="text" [id]="myId"/>
+<button  [disabled]="isDisabled"> click me</button> -->
+    
+    
+</body>
+</html>
+
+

@@ -1,0 +1,27 @@
+
+{{errorMsg}}
+
+
+     <!-- <div *ngIf="show" >  //with ngIF -->
+        
+            <table style="border:1px solid black">
+              <thead>
+                  <tr>
+                      <th>id</th>
+                      <th>name</th>
+                      <th> username</th>
+                      <th> email</th>
+                     
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr  *ngFor="let user of userlist">
+                      <td>{{user.id}}</td>
+                      <td>{{user.name}}</td>
+                      <td>{{user.username}}</td>
+                      <td> {{user.email}} </td>
+                     
+                  </tr>
+                
+              </tbody>
+          </table>
