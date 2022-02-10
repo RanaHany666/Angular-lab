@@ -1,5 +1,6 @@
 
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DiscountOffers } from '../sharedcalsses/DiscountOffers';
 import { ICategory } from '../sharedcalsses/ICategory';
 import { IProduct } from '../sharedcalsses/IProudcts';
@@ -23,7 +24,7 @@ export class ProductsComponent implements OnInit {
   clientName!: string;
   isPurshased!: boolean;
   ProductServiceService: any;
-  constructor( ) {
+  constructor( private router:Router, private activatedroute:ActivatedRoute ) {
     this.discount = DiscountOffers.ten;
     this.storeName = "Dream ";
     this.storeLogo = 'Lenvo';
@@ -73,6 +74,15 @@ export class ProductsComponent implements OnInit {
   }
   sendData(){
     this.childEvent.emit("Thanks for purchasing from our Store")
+  }
+  withDiscount()
+  {
+    this.router.navigate(['withdiscount'],{relativeTo:this.activatedroute})
+  }
+  withOutDiscount()
+  {
+    this.router.navigate(['withoutdiscount'],{relativeTo:this.activatedroute})
+
   }
 }
 

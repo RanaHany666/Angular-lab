@@ -13,6 +13,10 @@ import { FormsModule } from '@angular/forms';
 import{HttpClientModule} from '@angular/common/http';
 import { UserComponent } from './servicess/user/user.component';
 import { PostComponent } from './post/post.component';
+import { WithdiscountComponent } from './withdiscount/withdiscount.component';
+import { WithoutdiscountComponent } from './withoutdiscount/withoutdiscount.component';
+import { RegisterFormComponent } from './register-form/register-form.component';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,10 @@ import { PostComponent } from './post/post.component';
     SharedcalssesComponent,
     UserComponent,
     PostComponent,
+    WithdiscountComponent,
+    WithoutdiscountComponent,
+    RegisterFormComponent,
+    LoginFormComponent,
     
   ],
   imports: [
